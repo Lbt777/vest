@@ -124,6 +124,14 @@
                     :value="scope.row.status" />
         </template>
       </el-table-column>
+      <el-table-column label="开关"
+                       align="center"
+                       prop="listClass">
+        <template slot-scope="scope">
+          <span v-if="(scope.row.listClass == 'success')">B面</span>
+          <span v-else>A面</span>
+        </template>
+      </el-table-column>
       <el-table-column label="备注"
                        align="center"
                        prop="remark"
